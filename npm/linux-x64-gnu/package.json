@@ -1,5 +1,5 @@
 {
-  "name": "emmet_rs:node_wrapper-linux-x64-gnu",
+  "name": "@leodurillon/emmet_rs-linux-x64-gnu",
   "version": "0.0.0",
   "os": [
     "linux"
@@ -7,9 +7,9 @@
   "cpu": [
     "x64"
   ],
-  "main": "emmet_rs:node_wrapper.linux-x64-gnu.node",
+  "main": "emmet_rs.linux-x64-gnu.node",
   "files": [
-    "emmet_rs:node_wrapper.linux-x64-gnu.node"
+    "emmet_rs.linux-x64-gnu.node"
   ],
   "license": "MIT",
   "engines": {
@@ -17,5 +17,11 @@
   },
   "libc": [
     "glibc"
-  ]
+  ],
+  "repository": {
+    "url": "https://github.com/LeoDurillon/emmet-rs-node-wrapper.git"
+  },
+  "publishConfig": {
+    "@LeoDurillon:registry": "https://npm.pkg.github.com"
+  }
 }

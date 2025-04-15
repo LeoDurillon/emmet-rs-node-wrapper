@@ -1,5 +1,5 @@
 {
-  "name": "emmet_rs:node_wrapper-darwin-x64",
+  "name": "@leodurillon/emmet_rs-darwin-x64",
   "version": "0.0.0",
   "os": [
     "darwin"
@@ -7,12 +7,18 @@
   "cpu": [
     "x64"
   ],
-  "main": "emmet_rs:node_wrapper.darwin-x64.node",
+  "main": "emmet_rs.darwin-x64.node",
   "files": [
-    "emmet_rs:node_wrapper.darwin-x64.node"
+    "emmet_rs.darwin-x64.node"
   ],
   "license": "MIT",
   "engines": {
     "node": ">= 10"
+  },
+  "repository": {
+    "url": "https://github.com/LeoDurillon/emmet-rs-node-wrapper.git"
+  },
+  "publishConfig": {
+    "@LeoDurillon:registry": "https://npm.pkg.github.com"
   }
 }

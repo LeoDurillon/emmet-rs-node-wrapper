@@ -1,5 +1,5 @@
 {
-  "name": "emmet_rs:node_wrapper-win32-x64-msvc",
+  "name": "@leodurillon/emmet_rs-win32-x64-msvc",
   "version": "0.0.0",
   "os": [
     "win32"
@@ -7,12 +7,18 @@
   "cpu": [
     "x64"
   ],
-  "main": "emmet_rs:node_wrapper.win32-x64-msvc.node",
+  "main": "emmet_rs.win32-x64-msvc.node",
   "files": [
-    "emmet_rs:node_wrapper.win32-x64-msvc.node"
+    "emmet_rs.win32-x64-msvc.node"
   ],
   "license": "MIT",
   "engines": {
     "node": ">= 10"
+  },
+  "repository": {
+    "url": "https://github.com/LeoDurillon/emmet-rs-node-wrapper.git"
+  },
+  "publishConfig": {
+    "@LeoDurillon:registry": "https://npm.pkg.github.com"
   }
 }
