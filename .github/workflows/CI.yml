@@ -182,7 +182,8 @@ jobs:
         shell: bash
       - name: Publish
         run: |
-          echo "//registry.npmjs.org/:_authToken=$NPM_TOKEN" >> ~/.npmrc &&
+          echo "//npm.pkg.github.com/:_authToken=${{ secrets.GITHUB_TOKEN }}" > .npmrc
+          echo "@leodurillon:registry=https://npm.pkg.github.com/" >> .npmrc
           npm publish
         env:
           NPM_TOKEN: ${{secrets.NPM_TOKEN}}
