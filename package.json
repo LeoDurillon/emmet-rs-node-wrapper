@@ -1,0 +1,36 @@
+{
+  "name": "@leodurillon/emmet_rs",
+  "version": "0.0.0",
+  "main": "index.js",
+  "types": "index.d.ts",
+  "napi": {
+    "name": "emmet_rs",
+    "triples": {}
+  },
+  "license": "MIT",
+  "devDependencies": {
+    "@napi-rs/cli": "^2.17.0",
+    "ava": "^5.1.1"
+  },
+  "ava": {
+    "timeout": "3m"
+  },
+  "engines": {
+    "node": ">= 10"
+  },
+  "scripts": {
+    "artifacts": "napi artifacts",
+    "build": "napi build --platform --release",
+    "build:debug": "napi build --platform",
+    "prepublishOnly": "napi prepublish -t npm",
+    "test": "ava",
+    "universal": "napi universal",
+    "version": "napi version"
+  },
+  "repository": {
+    "url": "https://github.com/LeoDurillon/emmet-rs-node-wrapper.git"
+  },
+  "publishConfig": {
+    "@LeoDurillon:registry": "https://npm.pkg.github.com"
+  }
+}
