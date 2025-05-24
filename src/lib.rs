@@ -15,14 +15,15 @@ fn expand(input:String) -> Option<String>{
     }
     input_start += 1;
   }
-  let before_input= trimmed_input[..input_start].join(" ");
+  let mut before_input= trimmed_input[..input_start].join(" ");
   let input = trimmed_input[input_start..].join(" ");
   
   if !input_correctly_close(&input) || !input_correctly_structured(&input){
     return None
   }
+  before_input = format!("{}{}",before_input,if before_input.len() > 0 { " " } else{ "" }); 
 
-  Some(format!("{before_input} {}",Statement::new(&input, 0).parse()))
+  Some(format!("{}{}",before_input,Statement::new(&input, 0).parse()))
 }
 
 #[cfg(test)]
@@ -31,7 +32,7 @@ mod test_expand {
 
   #[test]
   fn should_expand(){
-    assert_eq!(Some("<div></div>".to_string()),expand("div".to_string()))
+    assert_eq!(Some("<div></div>".to_string()),expand("div".to_string()));
   }
 
   #[test]
